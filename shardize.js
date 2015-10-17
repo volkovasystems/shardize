@@ -67,8 +67,6 @@ var shardize = function shardize( text, formal ){
 		return text;
 	}
 
-	text = text.replace( shardize.CLEAN_PATTERN, "" );
-
 	if( shardize.TEXT_PATTERN.test( text ) ){
 		if( formal ){
 			text = text[ 0 ].toLowerCase( ) + text.substring( 1 );
@@ -97,10 +95,6 @@ var shardize = function shardize( text, formal ){
 		return text;
 	}
 };
-
-harden.bind( shardize )
-	( "CLEAN_PATTERN",
-		/[^\w\s]/g );
 
 harden.bind( shardize )
 	( "TEXT_PATTERN",
