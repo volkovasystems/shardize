@@ -1,7 +1,7 @@
 {
   "name": "shardize",
   "main": "shardize.js",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/volkovasystems/shardize",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
