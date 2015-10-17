@@ -63,6 +63,10 @@ var shardize = function shardize( text, formal ){
 		@end-meta-configuration
 	*/
 
+	if( !text ){
+		return text;
+	}
+
 	text = text.replace( shardize.CLEAN_PATTERN, "" );
 
 	if( shardize.TEXT_PATTERN.test( text ) ){
