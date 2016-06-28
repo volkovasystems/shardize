@@ -1,8 +1,12 @@
+"use strict";
+
 /*:
 	@module-license:
 		The MIT License (MIT)
+		@mit-license
 
-		Copyright (c) 2014 Richeve Siodina Bebedor
+		Copyright (@c) 2016 Richeve Siodina Bebedor
+		@email: richeve.bebedor@gmail.com
 
 		Permission is hereby granted, free of charge, to any person obtaining a copy
 		of this software and associated documentation files (the "Software"), to deal
@@ -25,32 +29,37 @@
 
 	@module-configuration:
 		{
-			"packageName": "shardize",
-			"fileName": "shardize.js",
-			"moduleName": "shardize",
-			"authorName": "Richeve S. Bebedor",
-			"authorEMail": "richeve.bebedor@gmail.com",
-			"repository": "git@github.com:volkovasystems/shardize.git",
-			"testCase": "shardize-test.js",
-			"isGlobal": true
+			"package": "shardize",
+			"path": "shardize/shardize.js",
+			"file": "shardize.js",
+			"module": "shardize",
+			"author": "Richeve S. Bebedor",
+			"eMail": "richeve.bebedor@gmail.com",
+			"repository": "https://github.com/volkovasystems/shardize.git",
+			"test": "shardize-test.js",
+			"global": true
 		}
 	@end-module-configuration
 
 	@module-documentation:
 
 	@end-module-documentation
+
+	@include:
+		{
+			"harden": "harden"
+		}
+	@end-include
 */
 
-if( !( typeof window != "undefined" &&
-	"harden" in window ) )
-{
+if( typeof window == "undefined" ){
 	var harden = require( "harden" );
 }
 
-if( typeof window != "undefined" && 
+if( typeof window != "undefined" &&
 	!( "harden" in window ) )
 {
-	throw new Error( "harden is not defined" ); 
+	throw new Error( "harden is not defined" );
 }
 
 var shardize = function shardize( text, formal ){
@@ -84,7 +93,7 @@ var shardize = function shardize( text, formal ){
 
 					}else if( divideCharacter && divideCharacter != "-" ){
 						return match.replace( divideCharacter, "-" );
-						
+
 					}else{
 						return match;
 					}
@@ -104,22 +113,14 @@ harden.bind( shardize )
 	( "TERM_PATTERN",
 		/^[a-z]|([-A-Z_ ])[a-zA-Z]/g );
 
-harden.bind( shardize )	
+harden.bind( shardize )
 	( "UPPERCASE_PATTERN",
 		/[A-Z]/ );
 
-harden.bind( shardize )	
+harden.bind( shardize )
 	( "FULL_UPPERCASE_PATTERN",
 		/^(?:[A-Z][A-Z0-9]*[-_ ]?)*[A-Z][A-Z0-9]*$/ );
 
-if( typeof module != "undefined" ){ 
-	module.exports = shardize; 
-}
-
-if( typeof global != "undefined" ){
-	harden
-		.bind( shardize )( "globalize", 
-			function globalize( ){
-				harden.bind( global )( "shardize", shardize );
-			} );
+if( typeof module != "undefined" ){
+	module.exports = shardize;
 }

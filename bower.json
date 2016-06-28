@@ -1,7 +1,7 @@
 {
   "name": "shardize",
   "main": "shardize.js",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/volkovasystems/shardize",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
@@ -25,6 +25,6 @@
     "tests"
   ],
   "dependencies": {
-    "harden": "~0.2.0"
+    "harden": "^0.3.2"
   }
 }

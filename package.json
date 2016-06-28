@@ -1,6 +1,6 @@
 {
   "name": "shardize",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Transform any human readable alphanumeric string divided by certain characters into dash separated form.",
   "main": "shardize.js",
   "scripts": {
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/volkovasystems/shardize#readme",
   "dependencies": {
-    "harden": "^0.2.0"
+    "harden": "^0.3.2"
   }
 }
