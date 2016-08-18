@@ -1,6 +1,6 @@
 "use strict";
 
-/*:
+/*;
 	@module-license:
 		The MIT License (MIT)
 		@mit-license
@@ -47,13 +47,21 @@
 
 	@include:
 		{
+			"disdo": "disdo",
 			"harden": "harden"
 		}
 	@end-include
 */
 
 if( typeof window == "undefined" ){
+	var disdo = require( "disdo" );
 	var harden = require( "harden" );
+}
+
+if( typeof window != "undefined" &&
+	!( "disdo" in window ) )
+{
+	throw new Error( "disdo is not defined" );
 }
 
 if( typeof window != "undefined" &&
@@ -62,64 +70,29 @@ if( typeof window != "undefined" &&
 	throw new Error( "harden is not defined" );
 }
 
-var shardize = function shardize( text, formal ){
-	/*:
+var shardize = function shardize( text ){
+	/*;
 		@meta-configuration:
 			{
-				"text:required": "string",
-				"formal:optional": "boolean"
+				"text:required": "string"
 			}
 		@end-meta-configuration
 	*/
 
-	if( !text ){
+	if( !text ||
+		text === "" ||
+		typeof text != "string" )
+	{
 		return text;
 	}
 
-	if( shardize.TEXT_PATTERN.test( text ) ){
-		if( formal ){
-			text = text[ 0 ].toLowerCase( ) + text.substring( 1 );
-		}
-
-		if( shardize.FULL_UPPERCASE_PATTERN.test( text ) ){
-			text = text.toLowerCase( );
-		}
-
-		return text
-			.replace( shardize.TERM_PATTERN,
-				function onReplaced( match, divideCharacter ){
-					if( shardize.UPPERCASE_PATTERN.test( divideCharacter ) ){
-						return match.replace( divideCharacter, "-" + divideCharacter.toLowerCase( ) );
-
-					}else if( divideCharacter && divideCharacter != "-" ){
-						return match.replace( divideCharacter, "-" );
-
-					}else{
-						return match;
-					}
-				} )
-			.toLowerCase( );
-
-	}else{
-		return text;
-	}
+	return disdo( text )
+		.toLowerCase( )
+		.replace( shardize.SPACE_PATTERN, "-" );
 };
 
 harden.bind( shardize )
-	( "TEXT_PATTERN",
-		/^(?:[a-zA-Z][a-zA-Z0-9]*[-_ ]?)*[a-zA-Z][a-zA-Z0-9]*$/ );
-
-harden.bind( shardize )
-	( "TERM_PATTERN",
-		/^[a-z]|([-A-Z_ ])[a-zA-Z]/g );
-
-harden.bind( shardize )
-	( "UPPERCASE_PATTERN",
-		/[A-Z]/ );
-
-harden.bind( shardize )
-	( "FULL_UPPERCASE_PATTERN",
-		/^(?:[A-Z][A-Z0-9]*[-_ ]?)*[A-Z][A-Z0-9]*$/ );
+	( "SPACE_PATTERN", /\s+/g );
 
 if( typeof module != "undefined" ){
 	module.exports = shardize;
