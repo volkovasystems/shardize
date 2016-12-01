@@ -34,6 +34,9 @@
 			"file": "shardize.js",
 			"module": "shardize",
 			"author": "Richeve S. Bebedor",
+			contributors:[
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/shardize.git",
 			"test": "shardize-test.js",
@@ -42,35 +45,27 @@
 	@end-module-configuration
 
 	@module-documentation:
-
+		Transform any human readable alphanumeric string divided by certain
+		characters into dash separated form. This should be named dasherize
+		but someone has took the name. So sad.
 	@end-module-documentation
 
 	@include:
 		{
 			"disdo": "disdo",
-			"harden": "harden"
+			"harden": "harden",
+			"falzy": "falzy",
+			"protype": "protype"
 		}
 	@end-include
 */
 
-if( typeof window == "undefined" ){
-	var disdo = require( "disdo" );
-	var harden = require( "harden" );
-}
+const disdo = require( "disdo" );
+const harden = require( "harden" );
+const falzy = require( "falzy" );
+const protype = require( "protype" );
 
-if( typeof window != "undefined" &&
-	!( "disdo" in window ) )
-{
-	throw new Error( "disdo is not defined" );
-}
-
-if( typeof window != "undefined" &&
-	!( "harden" in window ) )
-{
-	throw new Error( "harden is not defined" );
-}
-
-var shardize = function shardize( text ){
+const shardize = function shardize( text ){
 	/*;
 		@meta-configuration:
 			{
@@ -79,10 +74,7 @@ var shardize = function shardize( text ){
 		@end-meta-configuration
 	*/
 
-	if( !text ||
-		text === "" ||
-		typeof text != "string" )
-	{
+	if( falzy( text ) || !protype( text, STRING ) ){
 		return text;
 	}
 
@@ -94,6 +86,4 @@ var shardize = function shardize( text ){
 harden.bind( shardize )
 	( "SPACE_PATTERN", /\s+/g );
 
-if( typeof module != "undefined" ){
-	module.exports = shardize;
-}
+module.exports = shardize;
