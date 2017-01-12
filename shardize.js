@@ -53,7 +53,6 @@
 	@include:
 		{
 			"disdo": "disdo",
-			"harden": "harden",
 			"falzy": "falzy",
 			"protype": "protype"
 		}
@@ -61,9 +60,10 @@
 */
 
 const disdo = require( "disdo" );
-const harden = require( "harden" );
 const falzy = require( "falzy" );
 const protype = require( "protype" );
+
+const SPACE_PATTERN = /\s+/g;
 
 const shardize = function shardize( text ){
 	/*;
@@ -78,12 +78,7 @@ const shardize = function shardize( text ){
 		return text;
 	}
 
-	return disdo( text )
-		.toLowerCase( )
-		.replace( shardize.SPACE_PATTERN, "-" );
+	return disdo( text ).toLowerCase( ).replace( SPACE_PATTERN, "-" );
 };
-
-harden.bind( shardize )
-	( "SPACE_PATTERN", /\s+/g );
 
 module.exports = shardize;
