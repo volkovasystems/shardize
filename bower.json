@@ -1,6 +1,6 @@
 {
   "name": "shardize",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "main": "shardize.js",
   "support": "shardize.support.js",
   "deploy": "shardize.deploy.js",
@@ -30,7 +30,6 @@
   "dependencies": {
     "disdo": "^0.4.0",
     "falzy": "^0.7.0",
-    "harden": "^0.7.0",
     "protype": "^0.8.0"
   }
 }
