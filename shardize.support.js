@@ -1,63 +1,63 @@
 "use strict";
 
 /*;
-	@module-license:
-		The MIT License (MIT)
-		@mit-license
-
-		Copyright (@c) 2017 Richeve Siodina Bebedor
-		@email: richeve.bebedor@gmail.com
-
-		Permission is hereby granted, free of charge, to any person obtaining a copy
-		of this software and associated documentation files (the "Software"), to deal
-		in the Software without restriction, including without limitation the rights
-		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-		copies of the Software, and to permit persons to whom the Software is
-		furnished to do so, subject to the following conditions:
-
-		The above copyright notice and this permission notice shall be included in all
-		copies or substantial portions of the Software.
-
-		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-		SOFTWARE.
-	@end-module-license
-
-	@module-configuration:
-		{
-			"package": "shardize",
-			"path": "shardize/shardize.js",
-			"file": "shardize.js",
-			"module": "shardize",
-			"author": "Richeve S. Bebedor",
-			"contributors":[
-				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
-			],
-			"eMail": "richeve.bebedor@gmail.com",
-			"repository": "https://github.com/volkovasystems/shardize.git",
-			"test": "shardize-test.js",
-			"global": true
-		}
-	@end-module-configuration
-
-	@module-documentation:
-		Transform any human readable alphanumeric string divided by certain
-		characters into dash separated form. This should be named dasherize
-		but someone has took the name. So sad.
-	@end-module-documentation
-
-	@include:
-		{
-			"disdo": "disdo",
-			"falzy": "falzy",
-			"protype": "protype"
-		}
-	@end-include
-*/
+              	@module-license:
+              		The MIT License (MIT)
+              		@mit-license
+              
+              		Copyright (@c) 2017 Richeve Siodina Bebedor
+              		@email: richeve.bebedor@gmail.com
+              
+              		Permission is hereby granted, free of charge, to any person obtaining a copy
+              		of this software and associated documentation files (the "Software"), to deal
+              		in the Software without restriction, including without limitation the rights
+              		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+              		copies of the Software, and to permit persons to whom the Software is
+              		furnished to do so, subject to the following conditions:
+              
+              		The above copyright notice and this permission notice shall be included in all
+              		copies or substantial portions of the Software.
+              
+              		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+              		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+              		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+              		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+              		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+              		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+              		SOFTWARE.
+              	@end-module-license
+              
+              	@module-configuration:
+              		{
+              			"package": "shardize",
+              			"path": "shardize/shardize.js",
+              			"file": "shardize.js",
+              			"module": "shardize",
+              			"author": "Richeve S. Bebedor",
+              			"contributors":[
+              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+              			],
+              			"eMail": "richeve.bebedor@gmail.com",
+              			"repository": "https://github.com/volkovasystems/shardize.git",
+              			"test": "shardize-test.js",
+              			"global": true
+              		}
+              	@end-module-configuration
+              
+              	@module-documentation:
+              		Transform any human readable alphanumeric string divided by certain
+              		characters into dash separated form. This should be named dasherize
+              		but someone has took the name. So sad.
+              	@end-module-documentation
+              
+              	@include:
+              		{
+              			"disdo": "disdo",
+              			"falzy": "falzy",
+              			"protype": "protype"
+              		}
+              	@end-include
+              */
 
 var disdo = require("disdo");
 var falzy = require("falzy");
@@ -67,12 +67,12 @@ var SPACE_PATTERN = /\s+/g;
 
 var shardize = function shardize(text) {
 	/*;
- 	@meta-configuration:
- 		{
- 			"text:required": "string"
- 		}
- 	@end-meta-configuration
- */
+                                        	@meta-configuration:
+                                        		{
+                                        			"text:required": "string"
+                                        		}
+                                        	@end-meta-configuration
+                                        */
 
 	if (falzy(text) || !protype(text, STRING)) {
 		return text;
@@ -82,4 +82,5 @@ var shardize = function shardize(text) {
 };
 
 module.exports = shardize;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNoYXJkaXplLmpzIl0sIm5hbWVzIjpbImRpc2RvIiwicmVxdWlyZSIsImZhbHp5IiwicHJvdHlwZSIsIlNQQUNFX1BBVFRFUk4iLCJzaGFyZGl6ZSIsInRleHQiLCJTVFJJTkciLCJ0b0xvd2VyQ2FzZSIsInJlcGxhY2UiLCJtb2R1bGUiLCJleHBvcnRzIl0sIm1hcHBpbmdzIjoiQUFBQTs7QUFFQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUEyREEsSUFBTUEsUUFBUUMsUUFBUyxPQUFULENBQWQ7QUFDQSxJQUFNQyxRQUFRRCxRQUFTLE9BQVQsQ0FBZDtBQUNBLElBQU1FLFVBQVVGLFFBQVMsU0FBVCxDQUFoQjs7QUFFQSxJQUFNRyxnQkFBZ0IsTUFBdEI7O0FBRUEsSUFBTUMsV0FBVyxTQUFTQSxRQUFULENBQW1CQyxJQUFuQixFQUF5QjtBQUN6Qzs7Ozs7Ozs7QUFRQSxLQUFJSixNQUFPSSxJQUFQLEtBQWlCLENBQUNILFFBQVNHLElBQVQsRUFBZUMsTUFBZixDQUF0QixFQUErQztBQUM5QyxTQUFPRCxJQUFQO0FBQ0E7O0FBRUQsUUFBT04sTUFBT00sSUFBUCxFQUFjRSxXQUFkLEdBQTZCQyxPQUE3QixDQUFzQ0wsYUFBdEMsRUFBcUQsR0FBckQsQ0FBUDtBQUNBLENBZEQ7O0FBZ0JBTSxPQUFPQyxPQUFQLEdBQWlCTixRQUFqQiIsImZpbGUiOiJzaGFyZGl6ZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xuXG4vKjtcblx0QG1vZHVsZS1saWNlbnNlOlxuXHRcdFRoZSBNSVQgTGljZW5zZSAoTUlUKVxuXHRcdEBtaXQtbGljZW5zZVxuXG5cdFx0Q29weXJpZ2h0IChAYykgMjAxNyBSaWNoZXZlIFNpb2RpbmEgQmViZWRvclxuXHRcdEBlbWFpbDogcmljaGV2ZS5iZWJlZG9yQGdtYWlsLmNvbVxuXG5cdFx0UGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuXHRcdG9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlIFwiU29mdHdhcmVcIiksIHRvIGRlYWxcblx0XHRpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzXG5cdFx0dG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuXHRcdGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpc1xuXHRcdGZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6XG5cblx0XHRUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpbiBhbGxcblx0XHRjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLlxuXG5cdFx0VEhFIFNPRlRXQVJFIElTIFBST1ZJREVEIFwiQVMgSVNcIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUlxuXHRcdElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLFxuXHRcdEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuXHRcdEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVJcblx0XHRMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORyBGUk9NLFxuXHRcdE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU4gVEhFXG5cdFx0U09GVFdBUkUuXG5cdEBlbmQtbW9kdWxlLWxpY2Vuc2VcblxuXHRAbW9kdWxlLWNvbmZpZ3VyYXRpb246XG5cdFx0e1xuXHRcdFx0XCJwYWNrYWdlXCI6IFwic2hhcmRpemVcIixcblx0XHRcdFwicGF0aFwiOiBcInNoYXJkaXplL3NoYXJkaXplLmpzXCIsXG5cdFx0XHRcImZpbGVcIjogXCJzaGFyZGl6ZS5qc1wiLFxuXHRcdFx0XCJtb2R1bGVcIjogXCJzaGFyZGl6ZVwiLFxuXHRcdFx0XCJhdXRob3JcIjogXCJSaWNoZXZlIFMuIEJlYmVkb3JcIixcblx0XHRcdFwiY29udHJpYnV0b3JzXCI6W1xuXHRcdFx0XHRcIkpvaG4gTGVub24gTWFnaGFub3kgPGpvaG5sZW5vbm1hZ2hhbm95QGdtYWlsLmNvbT5cIlxuXHRcdFx0XSxcblx0XHRcdFwiZU1haWxcIjogXCJyaWNoZXZlLmJlYmVkb3JAZ21haWwuY29tXCIsXG5cdFx0XHRcInJlcG9zaXRvcnlcIjogXCJodHRwczovL2dpdGh1Yi5jb20vdm9sa292YXN5c3RlbXMvc2hhcmRpemUuZ2l0XCIsXG5cdFx0XHRcInRlc3RcIjogXCJzaGFyZGl6ZS10ZXN0LmpzXCIsXG5cdFx0XHRcImdsb2JhbFwiOiB0cnVlXG5cdFx0fVxuXHRAZW5kLW1vZHVsZS1jb25maWd1cmF0aW9uXG5cblx0QG1vZHVsZS1kb2N1bWVudGF0aW9uOlxuXHRcdFRyYW5zZm9ybSBhbnkgaHVtYW4gcmVhZGFibGUgYWxwaGFudW1lcmljIHN0cmluZyBkaXZpZGVkIGJ5IGNlcnRhaW5cblx0XHRjaGFyYWN0ZXJzIGludG8gZGFzaCBzZXBhcmF0ZWQgZm9ybS4gVGhpcyBzaG91bGQgYmUgbmFtZWQgZGFzaGVyaXplXG5cdFx0YnV0IHNvbWVvbmUgaGFzIHRvb2sgdGhlIG5hbWUuIFNvIHNhZC5cblx0QGVuZC1tb2R1bGUtZG9jdW1lbnRhdGlvblxuXG5cdEBpbmNsdWRlOlxuXHRcdHtcblx0XHRcdFwiZGlzZG9cIjogXCJkaXNkb1wiLFxuXHRcdFx0XCJmYWx6eVwiOiBcImZhbHp5XCIsXG5cdFx0XHRcInByb3R5cGVcIjogXCJwcm90eXBlXCJcblx0XHR9XG5cdEBlbmQtaW5jbHVkZVxuKi9cblxuY29uc3QgZGlzZG8gPSByZXF1aXJlKCBcImRpc2RvXCIgKTtcbmNvbnN0IGZhbHp5ID0gcmVxdWlyZSggXCJmYWx6eVwiICk7XG5jb25zdCBwcm90eXBlID0gcmVxdWlyZSggXCJwcm90eXBlXCIgKTtcblxuY29uc3QgU1BBQ0VfUEFUVEVSTiA9IC9cXHMrL2c7XG5cbmNvbnN0IHNoYXJkaXplID0gZnVuY3Rpb24gc2hhcmRpemUoIHRleHQgKXtcblx0Lyo7XG5cdFx0QG1ldGEtY29uZmlndXJhdGlvbjpcblx0XHRcdHtcblx0XHRcdFx0XCJ0ZXh0OnJlcXVpcmVkXCI6IFwic3RyaW5nXCJcblx0XHRcdH1cblx0XHRAZW5kLW1ldGEtY29uZmlndXJhdGlvblxuXHQqL1xuXG5cdGlmKCBmYWx6eSggdGV4dCApIHx8ICFwcm90eXBlKCB0ZXh0LCBTVFJJTkcgKSApe1xuXHRcdHJldHVybiB0ZXh0O1xuXHR9XG5cblx0cmV0dXJuIGRpc2RvKCB0ZXh0ICkudG9Mb3dlckNhc2UoICkucmVwbGFjZSggU1BBQ0VfUEFUVEVSTiwgXCItXCIgKTtcbn07XG5cbm1vZHVsZS5leHBvcnRzID0gc2hhcmRpemU7XG4iXX0=
+
+//# sourceMappingURL=shardize.support.js.map
