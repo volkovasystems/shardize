@@ -1,6 +1,6 @@
 {
   "name": "shardize",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "main": "shardize.deploy.js",
   "support": "shardize.support.js",
   "homepage": "https://github.com/volkovasystems/shardize",
@@ -27,8 +27,8 @@
     "tests"
   ],
   "dependencies": {
-    "disdo": "^0.11.0",
-    "falzy": "^0.16.0",
-    "protype": "^0.20.0"
+    "disdo": "^0.12.0",
+    "falzy": "^0.17.0",
+    "protype": "^0.21.0"
   }
 }
