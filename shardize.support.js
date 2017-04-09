@@ -46,8 +46,7 @@
               
               	@module-documentation:
               		Transform any human readable alphanumeric string divided by certain
-              		characters into dash separated form. This should be named dasherize
-              		but someone has took the name. So sad.
+              			characters into dash separated form.
               	@end-module-documentation
               
               	@include:
