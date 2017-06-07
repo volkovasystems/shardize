@@ -1,10 +1,13 @@
 
+const assert = require( "assert" );
 const shardize = require( "./shardize.js" );
 
-console.log( shardize( "Hello World" ) );
+assert.equal( shardize( "Hello World" ), "hello-world", "should have value 'hello-world'" );
 
-console.log( shardize( "hello_world" ) );
+assert.equal( shardize( "hello_world" ), "hello-world", "should have value 'hello-world'" );
 
-console.log( shardize( "helloWorld" ) );
+assert.equal( shardize( "helloWorld" ), "hello-world", "should have value 'hello-world'" );
 
-console.log( shardize( "hello world" ) );
+assert.equal( shardize( "hello world" ), "hello-world", "should have value 'hello-world'" );
+
+console.log( "ok" );
