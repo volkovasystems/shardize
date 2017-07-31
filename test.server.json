@@ -1,0 +1,74 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2017-07-31T10:58:20.594Z",
+    "end": "2017-07-31T10:58:20.599Z",
+    "duration": 5
+  },
+  "tests": [
+    {
+      "title": "should have value 'hello-world'",
+      "fullTitle": "shardize \"shardize( \"Hello World\" )\" should have value 'hello-world'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'hello-world'",
+      "fullTitle": "shardize \"shardize( \"hello_world\" )\" should have value 'hello-world'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'hello-world'",
+      "fullTitle": "shardize \"shardize( \"helloWorld\" )\" should have value 'hello-world'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'hello-world'",
+      "fullTitle": "shardize \"shardize( \"hello world\" )\" should have value 'hello-world'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should have value 'hello-world'",
+      "fullTitle": "shardize \"shardize( \"Hello World\" )\" should have value 'hello-world'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'hello-world'",
+      "fullTitle": "shardize \"shardize( \"hello_world\" )\" should have value 'hello-world'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'hello-world'",
+      "fullTitle": "shardize \"shardize( \"helloWorld\" )\" should have value 'hello-world'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'hello-world'",
+      "fullTitle": "shardize \"shardize( \"hello world\" )\" should have value 'hello-world'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
