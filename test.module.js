@@ -72,7 +72,7 @@ const path = require( "path" );
 //: @server:
 
 describe( "shardize", ( ) => {
-	
+
 	describe(`"shardize( "Hello World" )"`, ( ) => {
 		it("should have value 'hello-world'", ( ) => {
 
@@ -104,17 +104,17 @@ describe( "shardize", ( ) => {
 
 		});
 	});
-	
+
 } );
 
 
 //: @end-server
 
 
-//: @client: 
+//: @client:
 
 describe( "shardize", ( ) => {
-	
+
 	describe(`"shardize( "Hello World" )"`, ( ) => {
 		it("should have value 'hello-world'", ( ) => {
 
@@ -146,7 +146,7 @@ describe( "shardize", ( ) => {
 
 		});
 	});
-	
+
 } );
 
 //: @end-client
@@ -156,43 +156,74 @@ describe( "shardize", ( ) => {
 
 describe( "shardize", ( ) => {
 
-	
-	let directory = __dirname;
-	let testBridge = path.resolve( directory, "bridge.html" );
-	let bridgeURL = `file://${ testBridge }`;
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( `shardize( "Hello World" )`, ( ) => {
+		it( `should be equal to "hello-world"`, ( ) => {
 
-	describe(`"shardize( "Hello World" )"`, ( ) => {
-		it("should have value 'hello-world'", ( ) => {
+			let result = browser.url( bridgeURL ).execute(
 
-			assert.equal( shardize ( true, true ) );
+				function( ){
+					return shardize( "Hello World" );
+				}
 
-		});
-	});
+			).value;
 
-	describe(`"shardize( "hello_world" )"`, ( ) => {
-		it("should have value 'hello-world'", ( ) => {
+			assert.equal( result, "hello-world" );
 
-			assert.equal( shardize ( true, true ) );
+		} );
+	} );
 
-		});
-	});
+	describe( `shardize( "hello_world" )`, ( ) => {
+		it( `should be equal to "hello-world"`, ( ) => {
 
-	describe(`"shardize( "helloWorld" )"`, ( ) => {
-		it("should have value 'hello-world'", ( ) => {
+			let result = browser.url( bridgeURL ).execute(
 
-			assert.equal( shardize ( true, true ) );
+				function( ){
 
-		});
-	});
+					return shardize( "hello_world" );
 
-	describe(`"shardize( "hello world" )"`, ( ) => {
-		it("should have value 'hello-world'" , ( ) => {
+				}
 
-			assert.equal( shardize ( true, true ) );
-		});
-	});
-	
+			).value;
+
+			assert.equal( result, "hello-world" );
+
+		} );
+	} );
+
+	describe( `shardize( "helloWorld" )`, ( ) => {
+		it( `should be equal to "hello-world"`, ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return shardize( "helloWorld" );
+				}
+
+			).value;
+
+			assert.equal( result, "hello-world" );
+
+		} );
+	} );
+
+	describe( `shardize( "hello world" )`, ( ) => {
+		it( `should be equal to "hello-world"`, ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return shardize( "hello world" );
+				}
+
+			).value;
+
+			assert.equal( result, "hello-world" );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
