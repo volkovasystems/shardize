@@ -159,7 +159,7 @@ describe( "shardize", ( ) => {
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
 	describe( `shardize( "Hello World" )`, ( ) => {
-		it( `should be equal to "hello-world"`, ( ) => {
+		it( `"should be equal to 'hello-world'`, ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
@@ -173,6 +173,7 @@ describe( "shardize", ( ) => {
 
 		} );
 	} );
+
 
 	describe( `shardize( "hello_world" )`, ( ) => {
 		it( `should be equal to "hello-world"`, ( ) => {
@@ -192,6 +193,7 @@ describe( "shardize", ( ) => {
 		} );
 	} );
 
+
 	describe( `shardize( "helloWorld" )`, ( ) => {
 		it( `should be equal to "hello-world"`, ( ) => {
 
@@ -207,6 +209,7 @@ describe( "shardize", ( ) => {
 
 		} );
 	} );
+	
 
 	describe( `shardize( "hello world" )`, ( ) => {
 		it( `should be equal to "hello-world"`, ( ) => {
