@@ -1,8 +1,32 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./shardize.deploy.js">
-		</script>
+		<title>shardize unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./shardize.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "shardize unit test", function( assert ) {
+
+				assert.equal( shardize( "Hello World" ), "hello-world", "should be equal to 'hello-world'" );
+
+				assert.equal( shardize( "hello_world" ), "hello-world", "should be equal to 'hello-world'" );
+
+				assert.equal( shardize( "helloWorld" ), "hello-world", "should be equal to 'hello-world'" );
+
+				assert.equal( shardize( "hello world" ), "hello-world", "should be equal to 'hello-world'" );
+
+			} );
+		</script>
+	</body>
 </html>
