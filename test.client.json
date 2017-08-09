@@ -1,0 +1,180 @@
+{
+	"state": {
+		"passed": 4,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-09T02:47:01.904Z",
+	"end": "2017-08-09T02:47:42.753Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "shardize",
+			"duration": 0,
+			"start": "2017-08-09T02:47:42.350Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "shardize",
+			"duration": 226,
+			"start": "2017-08-09T02:47:42.351Z",
+			"end": "2017-08-09T02:47:42.577Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-09T02:47:42.352Z",
+					"end": "2017-08-09T02:47:42.353Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "shardize",
+					"associatedTest": "should be equal to 'hello-world'"
+				},
+				{
+					"start": "2017-08-09T02:47:42.456Z",
+					"end": "2017-08-09T02:47:42.457Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "shardize",
+					"associatedTest": "should be equal to 'hello-world'"
+				},
+				{
+					"start": "2017-08-09T02:47:42.458Z",
+					"end": "2017-08-09T02:47:42.458Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "shardize",
+					"associatedTest": "should be equal to 'hello-world'"
+				},
+				{
+					"start": "2017-08-09T02:47:42.499Z",
+					"end": "2017-08-09T02:47:42.499Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "shardize",
+					"associatedTest": "should be equal to 'hello-world'"
+				},
+				{
+					"start": "2017-08-09T02:47:42.500Z",
+					"end": "2017-08-09T02:47:42.500Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "shardize",
+					"associatedTest": "should be equal to 'hello-world'"
+				},
+				{
+					"start": "2017-08-09T02:47:42.537Z",
+					"end": "2017-08-09T02:47:42.537Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "shardize",
+					"associatedTest": "should be equal to 'hello-world'"
+				},
+				{
+					"start": "2017-08-09T02:47:42.537Z",
+					"end": "2017-08-09T02:47:42.538Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "shardize",
+					"associatedTest": "should be equal to 'hello-world'"
+				},
+				{
+					"start": "2017-08-09T02:47:42.576Z",
+					"end": "2017-08-09T02:47:42.577Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "shardize",
+					"associatedTest": "should be equal to 'hello-world'"
+				},
+				{
+					"start": "2017-08-09T02:47:42.577Z",
+					"end": "2017-08-09T02:47:42.577Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "shardize"
+				}
+			]
+		},
+		{
+			"name": "`shardize( 'Hello World' )`",
+			"duration": 106,
+			"start": "2017-08-09T02:47:42.351Z",
+			"end": "2017-08-09T02:47:42.457Z",
+			"tests": [
+				{
+					"name": "should be equal to 'hello-world'",
+					"start": "2017-08-09T02:47:42.352Z",
+					"end": "2017-08-09T02:47:42.456Z",
+					"duration": 104,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`shardize( 'hello_world' )`",
+			"duration": 43,
+			"start": "2017-08-09T02:47:42.457Z",
+			"end": "2017-08-09T02:47:42.500Z",
+			"tests": [
+				{
+					"name": "should be equal to 'hello-world'",
+					"start": "2017-08-09T02:47:42.458Z",
+					"end": "2017-08-09T02:47:42.499Z",
+					"duration": 41,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`shardize( 'helloWorld' )`",
+			"duration": 37,
+			"start": "2017-08-09T02:47:42.500Z",
+			"end": "2017-08-09T02:47:42.537Z",
+			"tests": [
+				{
+					"name": "should be equal to 'hello-world'",
+					"start": "2017-08-09T02:47:42.500Z",
+					"end": "2017-08-09T02:47:42.537Z",
+					"duration": 37,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`shardize( 'hello world' )`",
+			"duration": 40,
+			"start": "2017-08-09T02:47:42.537Z",
+			"end": "2017-08-09T02:47:42.577Z",
+			"tests": [
+				{
+					"name": "should be equal to 'hello-world'",
+					"start": "2017-08-09T02:47:42.537Z",
+					"end": "2017-08-09T02:47:42.576Z",
+					"duration": 39,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

@@ -68,7 +68,7 @@ const shardize = require( "./shardize.js" );
 //: @server:
 
 describe( "shardize", ( ) => {
-	
+
 	describe( "`shardize( 'Hello World' )`", ( ) => {
 		it( "should have value 'hello-world'", ( ) => {
 
