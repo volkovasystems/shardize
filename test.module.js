@@ -72,7 +72,7 @@ const path = require( "path" );
 //: @server:
 
 describe( "shardize", ( ) => {
-	
+
 	describe( "`shardize( 'Hello World' )`", ( ) => {
 		it( "should have value 'hello-world'", ( ) => {
 
@@ -116,7 +116,7 @@ describe( "shardize", ( ) => {
 //: @client:
 
 describe( "shardize", ( ) => {
-	
+
 	describe( "`shardize( 'Hello World' )`", ( ) => {
 		it( "should have value 'hello-world'", ( ) => {
 
@@ -161,8 +161,8 @@ describe( "shardize", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( `shardize( "Hello World" )`, ( ) => {
-		it( `"should be equal to 'hello-world'`, ( ) => {
+	describe( "`shardize( 'Hello World' )`", ( ) => {
+		it( "should be equal to 'hello-world'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
@@ -178,8 +178,8 @@ describe( "shardize", ( ) => {
 	} );
 
 
-	describe( `shardize( "hello_world" )`, ( ) => {
-		it( `should be equal to "hello-world"`, ( ) => {
+	describe( "`shardize( 'hello_world' )`", ( ) => {
+		it( "should be equal to 'hello-world'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
@@ -197,8 +197,8 @@ describe( "shardize", ( ) => {
 	} );
 
 
-	describe( `shardize( "helloWorld" )`, ( ) => {
-		it( `should be equal to "hello-world"`, ( ) => {
+	describe( "`shardize( 'helloWorld' )`", ( ) => {
+		it( "should be equal to 'hello-world'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
@@ -212,10 +212,10 @@ describe( "shardize", ( ) => {
 
 		} );
 	} );
-	
 
-	describe( `shardize( "hello world" )`, ( ) => {
-		it( `should be equal to "hello-world"`, ( ) => {
+
+	describe( "`shardize( 'hello world' )`", ( ) => {
+		it( "should be equal to 'hello-world'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
