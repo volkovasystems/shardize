@@ -5,35 +5,35 @@
 		"passes": 4,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-08-09T02:47:00.809Z",
-		"end": "2017-08-09T02:47:00.814Z",
+		"start": "2017-08-09T02:55:01.676Z",
+		"end": "2017-08-09T02:55:01.681Z",
 		"duration": 5
 	},
 	"tests": [
 		{
-			"title": "should have value 'hello-world'",
-			"fullTitle": "shardize `shardize( 'Hello World' )` should have value 'hello-world'",
+			"title": "should be equal to 'hello-world'",
+			"fullTitle": "shardize `shardize( 'Hello World' )` should be equal to 'hello-world'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'hello-world'",
+			"fullTitle": "shardize `shardize( 'hello_world' )` should be equal to 'hello-world'",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
-			"title": "should have value 'hello-world'",
-			"fullTitle": "shardize `shardize( 'hello_world' )` should have value 'hello-world'",
+			"title": "should be equal to 'hello-world'",
+			"fullTitle": "shardize `shardize( 'helloWorld' )` should be equal to 'hello-world'",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
-			"title": "should have value 'hello-world'",
-			"fullTitle": "shardize `shardize( 'helloWorld' )` should have value 'hello-world'",
-			"duration": 0,
-			"currentRetry": 0,
-			"err": {}
-		},
-		{
-			"title": "should have value 'hello-world'",
-			"fullTitle": "shardize `shardize( 'hello world' )` should have value 'hello-world'",
+			"title": "should be equal to 'hello-world'",
+			"fullTitle": "shardize `shardize( 'hello world' )` should be equal to 'hello-world'",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
@@ -43,29 +43,29 @@
 	"failures": [],
 	"passes": [
 		{
-			"title": "should have value 'hello-world'",
-			"fullTitle": "shardize `shardize( 'Hello World' )` should have value 'hello-world'",
+			"title": "should be equal to 'hello-world'",
+			"fullTitle": "shardize `shardize( 'Hello World' )` should be equal to 'hello-world'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'hello-world'",
+			"fullTitle": "shardize `shardize( 'hello_world' )` should be equal to 'hello-world'",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
-			"title": "should have value 'hello-world'",
-			"fullTitle": "shardize `shardize( 'hello_world' )` should have value 'hello-world'",
+			"title": "should be equal to 'hello-world'",
+			"fullTitle": "shardize `shardize( 'helloWorld' )` should be equal to 'hello-world'",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
-			"title": "should have value 'hello-world'",
-			"fullTitle": "shardize `shardize( 'helloWorld' )` should have value 'hello-world'",
-			"duration": 0,
-			"currentRetry": 0,
-			"err": {}
-		},
-		{
-			"title": "should have value 'hello-world'",
-			"fullTitle": "shardize `shardize( 'hello world' )` should have value 'hello-world'",
+			"title": "should be equal to 'hello-world'",
+			"fullTitle": "shardize `shardize( 'hello world' )` should be equal to 'hello-world'",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}

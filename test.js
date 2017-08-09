@@ -70,7 +70,7 @@ const shardize = require( "./shardize.js" );
 describe( "shardize", ( ) => {
 
 	describe( "`shardize( 'Hello World' )`", ( ) => {
-		it( "should have value 'hello-world'", ( ) => {
+		it( "should be equal to 'hello-world'", ( ) => {
 
 			assert.equal( shardize( "Hello World" ), "hello-world" );
 
@@ -79,7 +79,7 @@ describe( "shardize", ( ) => {
 
 
 	describe( "`shardize( 'hello_world' )`", ( ) => {
-		it( "should have value 'hello-world'", ( ) => {
+		it( "should be equal to 'hello-world'", ( ) => {
 
 			assert.equal( shardize( "hello_world" ), "hello-world" );
 
@@ -88,7 +88,7 @@ describe( "shardize", ( ) => {
 
 
 	describe( "`shardize( 'helloWorld' )`", ( ) => {
-		it( "should have value 'hello-world'", ( ) => {
+		it( "should be equal to 'hello-world'", ( ) => {
 
 			assert.equal( shardize( "helloWorld" ), "hello-world");
 
@@ -97,7 +97,7 @@ describe( "shardize", ( ) => {
 
 
 	describe( "`shardize( 'hello world' )`", ( ) => {
-		it( "should have value 'hello-world'" , ( ) => {
+		it( "should be equal to 'hello-world'" , ( ) => {
 
 			assert.equal( shardize( "hello world" ), "hello-world" );
 
