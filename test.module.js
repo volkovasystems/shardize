@@ -78,8 +78,8 @@ describe( "shardize", ( ) => {
 
 			assert.equal( shardize( "Hello World" ), "hello-world" );
 
-		});
-	});
+		} );
+	} );
 
 
 	describe( "`shardize( 'hello_world' )`", ( ) => {
@@ -87,8 +87,8 @@ describe( "shardize", ( ) => {
 
 			assert.equal( shardize( "hello_world" ), "hello-world" );
 
-		});
-	});
+		} );
+	} );
 
 
 	describe( "`shardize( 'helloWorld' )`", ( ) => {
@@ -96,8 +96,8 @@ describe( "shardize", ( ) => {
 
 			assert.equal( shardize( "helloWorld" ), "hello-world");
 
-		});
-	});
+		} );
+	} );
 
 
 	describe( "`shardize( 'hello world' )`", ( ) => {
@@ -105,8 +105,9 @@ describe( "shardize", ( ) => {
 
 			assert.equal( shardize( "hello world" ), "hello-world" );
 
-		});
-	});
+		} );
+	} );
+
 } );
 
 
@@ -122,8 +123,8 @@ describe( "shardize", ( ) => {
 
 			assert.equal( shardize( "Hello World" ), "hello-world" );
 
-		});
-	});
+		} );
+	} );
 
 
 	describe( "`shardize( 'hello_world' )`", ( ) => {
@@ -131,8 +132,8 @@ describe( "shardize", ( ) => {
 
 			assert.equal( shardize( "hello_world" ), "hello-world" );
 
-		});
-	});
+		} );
+	} );
 
 
 	describe( "`shardize( 'helloWorld' )`", ( ) => {
@@ -140,8 +141,8 @@ describe( "shardize", ( ) => {
 
 			assert.equal( shardize( "helloWorld" ), "hello-world");
 
-		});
-	});
+		} );
+	} );
 
 
 	describe( "`shardize( 'hello world' )`", ( ) => {
@@ -149,8 +150,9 @@ describe( "shardize", ( ) => {
 
 			assert.equal( shardize( "hello world" ), "hello-world" );
 
-		});
-	});
+		} );
+	} );
+	
 } );
 //: @end-client
 
