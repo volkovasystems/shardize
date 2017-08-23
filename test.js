@@ -77,7 +77,6 @@ describe( "shardize", ( ) => {
 		} );
 	} );
 
-
 	describe( "`shardize( 'hello_world' )`", ( ) => {
 		it( "should be equal to 'hello-world'", ( ) => {
 
@@ -86,7 +85,6 @@ describe( "shardize", ( ) => {
 		} );
 	} );
 
-
 	describe( "`shardize( 'helloWorld' )`", ( ) => {
 		it( "should be equal to 'hello-world'", ( ) => {
 
@@ -94,7 +92,6 @@ describe( "shardize", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`shardize( 'hello world' )`", ( ) => {
 		it( "should be equal to 'hello-world'" , ( ) => {
